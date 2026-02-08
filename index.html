@@ -1,1 +1,68 @@
-<!DOCTYPE html>\n<html lang='en'>\n<head>\n    <meta charset='UTF-8'>\n    <meta name='viewport' content='width=device-width, initial-scale=1.0'>\n    <title>Ride Sharing Platform</title>\n    <style>\n        body {\n            margin: 0;\n            font-family: Arial, sans-serif;\n            background-color: #121212;\n            color: #ffffff;\n        }\n        header {\n            background: #1e1e1e;\n            padding: 10px 20px;\n            display: flex;\n            justify-content: space-between;\n            align-items: center;\n        }\n        nav a {\n            color: #00aaff;\n            margin: 0 15px;\n            text-decoration: none;\n        }\n        .hero {\n            text-align: center;\n            padding: 50px 20px;\n            background: #262626;\n        }\n        .features, .how-it-works, .cta {\n            padding: 40px 20px;\n            background: #1e1e1e;\n        }\n        .book-ride, .admin-dashboard {\n            padding: 20px;\n            background: #333;\n            border-radius: 8px;\n            margin: 20px auto;\n            width: 90%;\n        }\n        footer {\n            text-align: center;\n            padding: 20px;\n            background: #1e1e1e;\n        }\n        @media (max-width: 600px) {\n            nav a {\n                display: block;\n                margin: 10px 0;\n            }\n        }\n    </style>\n</head>\n<body>\n    <header>\n        <div class='logo'>RideShare</div>\n        <nav>\n            <a href='#features'>Features</a>\n            <a href='#how-it-works'>How it Works</a>\n            <a href='#login'>Login</a>\n            <a href='#signup'>Signup</a>\n            <a href='#book-ride'>Book a Ride</a>\n        </nav>\n    </header>\n    <div class='hero'>\n        <h1>Welcome to RideShare</h1>\n        <p>Your seamless ride-sharing experience starts here</p>\n        <button onclick="document.getElementById('book-ride').scrollIntoView();">Book a Ride</button>\n    </div>\n    <section id='features' class='features'>\n        <h2>Features</h2>\n        <ul>\n            <li>Easy Booking</li>\n            <li>Real-time Tracking</li>\n            <li>Seamless Payments</li>\n        </ul>\n    </section>\n    <section id='how-it-works' class='how-it-works'>\n        <h2>How It Works</h2>\n        <p>1. Download the app. <br>2. Sign up and book your ride. <br>3. Enjoy your journey.</p>\n    </section>\n    <section id='login' class='admin-dashboard'>\n        <h2>Login</h2>\n        <form onsubmit='event.preventDefault(); alert("Logged in!");'>\n            <input type='text' placeholder='Username' required>\n            <input type='password' placeholder='Password' required>\n            <button type='submit'>Login</button>\n        </form>\n    </section>\n    <section id='signup' class='admin-dashboard'>\n        <h2>Signup</h2>\n        <form onsubmit='event.preventDefault(); alert("Signed up!");'>\n            <input type='text' placeholder='Username' required>\n            <input type='email' placeholder='Email' required>\n            <input type='password' placeholder='Password' required>\n            <button type='submit'>Signup</button>\n        </form>\n    </section>\n    <section id='book-ride' class='book-ride'>\n        <h2>Book a Ride</h2>\n        <form onsubmit='event.preventDefault(); alert("Ride booked!");'>\n            <input type='text' placeholder='Pickup Location' required>\n            <input type='text' placeholder='Dropoff Location' required>\n            <button type='submit'>Book Now</button>\n        </form>\n    </section>\n    <section id='cta' class='cta'>\n        <h2>Ready to share a ride?</h2>\n        <button onclick="document.getElementById('signup').scrollIntoView();">Join Now</button>\n    </section>\n    <footer>\n        <p>&copy; 2026 RideShare. All rights reserved.</p>\n    </footer>\n</body>\n</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>JAAAO - Ride Sharing Platform</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>JAAAO</h1>
+            <ul>
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#how-it-works">How It Works</a></li>
+                <li><a href="#login">Login/Signup</a></li>
+                <li><a href="#book-ride">Book a Ride</a></li>
+                <li><a href="#admin">Admin</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="hero">
+        <h2>Welcome to JAAAO</h2>
+        <p>Your ride-sharing solution!</p>
+        <a href="#features" class="cta">Learn More</a>
+    </section>
+    <section id="features">
+        <h2>Features</h2>
+        <ul>
+            <li>Easy Booking</li>
+            <li>Real-time Tracking</li>
+            <li>User-Friendly Interface</li>
+        </ul>
+    </section>
+    <section id="how-it-works">
+        <h2>How It Works</h2>
+        <p>Simply choose your destination, schedule your ride, and let us handle the rest!</p>
+    </section>
+    <section id="login">
+        <h2>Login/Signup</h2>
+        <form>
+            <input type="text" placeholder="Username" required>
+            <input type="password" placeholder="Password" required>
+            <button type="submit">Login</button>
+            <p>Don't have an account? <a href="#signup">Signup here</a></p>
+        </form>
+    </section>
+    <section id="book-ride">
+        <h2>Book a Ride</h2>
+        <form>
+            <label for="pickup">Pickup Location:</label>
+            <input type="text" id="pickup" required>
+            <label for="destination">Destination:</label>
+            <input type="text" id="destination" required>
+            <button type="submit">Book Ride</button>
+        </form>
+    </section>
+    <section id="admin">
+        <h2>Admin Dashboard</h2>
+        <p>Manage rides and users easily!</p>
+    </section>
+    <footer>
+        <p>&copy; 2026 JAAAO. All rights reserved.</p>
+    </footer>
+    <script src="app.js"></script>
+</body>
+</html>
